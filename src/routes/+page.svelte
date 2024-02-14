@@ -27,14 +27,14 @@
       const alarmDateTime = new Date(currentTime.toDateString() + ' ' + selectedTime);
       //@ts-ignore
       const timeUntilAlarm = alarmDateTime - currentTime;
-  
+
       if (timeUntilAlarm <= 0) {
         alert('Please select a future time for the alarm.');
         return;
       }
   
       setTimeout(() => {
-        alarmSound.play();
+        alarmSound.play(); 
        // alert('Alarm!');
       }, timeUntilAlarm);
     }
